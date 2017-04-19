@@ -1,5 +1,7 @@
-<html lang="en"><head>
-    <title>Code coverage report for node-npmtest-gulp-jasmine/gulp-jasmine/index.js</title>
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for node-npmtest-gulp-jasmine/node_modules/gulp-jasmine/index.js</title>
     <meta charset="utf-8">
     <style>
         body, html {
@@ -192,7 +194,7 @@
     <h1 style="font-weight: bold;">
         <a href="https://github.com/npmtest/node-npmtest-gulp-jasmine">npmtest-gulp-jasmine (v0.0.1)</a>
     </h1>
-    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-jasmine/gulp-jasmine/index.js</span></h1>
+    <h1>Code coverage report for <span class="entity">node-npmtest-gulp-jasmine/node_modules/gulp-jasmine/index.js</span></h1>
     <h2>
         
         Statements: <span class="metric">14.29% <small>(8 / 56)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
@@ -208,11 +210,11 @@
         
         Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
     </h2>
-    <div class="path"><a href="../../index.html">All files</a> » <a href="index.html">node-npmtest-gulp-jasmine/gulp-jasmine/</a> » index.js</div>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">node-npmtest-gulp-jasmine/node_modules/gulp-jasmine/</a> &#187; index.js</div>
 </div>
 <div class="body">
 <pre><table class="coverage">
-<tbody><tr><td class="line-count">1
+<tr><td class="line-count">1
 2
 3
 4
@@ -436,112 +438,111 @@ var through = require('through2');
 var Jasmine = require('jasmine');
 var Reporter = require('jasmine-terminal-reporter');
 &nbsp;
-<span class="fstat-no" title="function not covered">function deleteRequireCache(id) {</span>
-<span class="cstat-no" title="statement not covered">	if (!id || id.indexOf('node_modules') !== -1) {</span>
-<span class="cstat-no" title="statement not covered">		return;</span>
+<span class="fstat-no" title="function not covered" >function deleteRequireCache(id) {</span>
+<span class="cstat-no" title="statement not covered" >	if (!id || id.indexOf('node_modules') !== -1) {</span>
+<span class="cstat-no" title="statement not covered" >		return;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var files = require.cache[id];</span>
+<span class="cstat-no" title="statement not covered" >	var files = require.cache[id];</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (files !== undefined) {</span>
-<span class="cstat-no" title="statement not covered">		Object.keys(files.children).forEach(<span class="fstat-no" title="function not covered">function (file) {</span></span>
-<span class="cstat-no" title="statement not covered">			deleteRequireCache(files.children[file].id);</span>
+<span class="cstat-no" title="statement not covered" >	if (files !== undefined) {</span>
+<span class="cstat-no" title="statement not covered" >		Object.keys(files.children).forEach(<span class="fstat-no" title="function not covered" >function (file) {</span></span>
+<span class="cstat-no" title="statement not covered" >			deleteRequireCache(files.children[file].id);</span>
 		});
 &nbsp;
-<span class="cstat-no" title="statement not covered">		delete require.cache[id];</span>
+<span class="cstat-no" title="statement not covered" >		delete require.cache[id];</span>
 	}
 }
 &nbsp;
-module.exports = <span class="fstat-no" title="function not covered">function (opts) {</span>
-<span class="cstat-no" title="statement not covered">	opts = opts || {};</span>
+module.exports = <span class="fstat-no" title="function not covered" >function (opts) {</span>
+<span class="cstat-no" title="statement not covered" >	opts = opts || {};</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var jasmine = new Jasmine();</span>
+<span class="cstat-no" title="statement not covered" >	var jasmine = new Jasmine();</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (opts.timeout) {</span>
-<span class="cstat-no" title="statement not covered">		jasmine.jasmine.DEFAULT_TIMEOUT_INTERVAL = opts.timeout;</span>
+<span class="cstat-no" title="statement not covered" >	if (opts.timeout) {</span>
+<span class="cstat-no" title="statement not covered" >		jasmine.jasmine.DEFAULT_TIMEOUT_INTERVAL = opts.timeout;</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (opts.config) {</span>
-<span class="cstat-no" title="statement not covered">		jasmine.loadConfig(opts.config);</span>
+<span class="cstat-no" title="statement not covered" >	if (opts.config) {</span>
+<span class="cstat-no" title="statement not covered" >		jasmine.loadConfig(opts.config);</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	var errorOnFail = opts.errorOnFail === undefined ? true : opts.errorOnFail;</span>
-<span class="cstat-no" title="statement not covered">	var color = process.argv.indexOf('--no-color') === -1;</span>
-<span class="cstat-no" title="statement not covered">	var reporter = opts.reporter;</span>
+<span class="cstat-no" title="statement not covered" >	var errorOnFail = opts.errorOnFail === undefined ? true : opts.errorOnFail;</span>
+<span class="cstat-no" title="statement not covered" >	var color = process.argv.indexOf('--no-color') === -1;</span>
+<span class="cstat-no" title="statement not covered" >	var reporter = opts.reporter;</span>
 &nbsp;
 	// default reporter behavior changed in 2.5.2
-<span class="cstat-no" title="statement not covered">	if (jasmine.env.clearReporters) {</span>
-<span class="cstat-no" title="statement not covered">		jasmine.env.clearReporters();</span>
+<span class="cstat-no" title="statement not covered" >	if (jasmine.env.clearReporters) {</span>
+<span class="cstat-no" title="statement not covered" >		jasmine.env.clearReporters();</span>
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	if (reporter) {</span>
-<span class="cstat-no" title="statement not covered">		arrify(reporter).forEach(<span class="fstat-no" title="function not covered">function (el) {</span></span>
-<span class="cstat-no" title="statement not covered">			jasmine.addReporter(el);</span>
+<span class="cstat-no" title="statement not covered" >	if (reporter) {</span>
+<span class="cstat-no" title="statement not covered" >		arrify(reporter).forEach(<span class="fstat-no" title="function not covered" >function (el) {</span></span>
+<span class="cstat-no" title="statement not covered" >			jasmine.addReporter(el);</span>
 		});
 	} else {
-<span class="cstat-no" title="statement not covered">		jasmine.addReporter(new Reporter({</span>
+<span class="cstat-no" title="statement not covered" >		jasmine.addReporter(new Reporter({</span>
 			isVerbose: opts.verbose,
 			showColors: color,
 			includeStackTrace: opts.includeStackTrace
 		}));
 	}
 &nbsp;
-<span class="cstat-no" title="statement not covered">	return through.obj(<span class="fstat-no" title="function not covered">function (file, enc, cb) {</span></span>
-<span class="cstat-no" title="statement not covered">		if (file.isNull()) {</span>
-<span class="cstat-no" title="statement not covered">			cb(null, file);</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >	return through.obj(<span class="fstat-no" title="function not covered" >function (file, enc, cb) {</span></span>
+<span class="cstat-no" title="statement not covered" >		if (file.isNull()) {</span>
+<span class="cstat-no" title="statement not covered" >			cb(null, file);</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
-<span class="cstat-no" title="statement not covered">		if (file.isStream()) {</span>
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError('gulp-jasmine', 'Streaming not supported'));</span>
-<span class="cstat-no" title="statement not covered">			return;</span>
+<span class="cstat-no" title="statement not covered" >		if (file.isStream()) {</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError('gulp-jasmine', 'Streaming not supported'));</span>
+<span class="cstat-no" title="statement not covered" >			return;</span>
 		}
 &nbsp;
 		// get the cache object of the specs.js file,
 		// delete it and its children recursively from cache
-<span class="cstat-no" title="statement not covered">		var resolvedPath = path.resolve(file.path);</span>
-<span class="cstat-no" title="statement not covered">		var modId = require.resolve(resolvedPath);</span>
-<span class="cstat-no" title="statement not covered">		deleteRequireCache(modId);</span>
+<span class="cstat-no" title="statement not covered" >		var resolvedPath = path.resolve(file.path);</span>
+<span class="cstat-no" title="statement not covered" >		var modId = require.resolve(resolvedPath);</span>
+<span class="cstat-no" title="statement not covered" >		deleteRequireCache(modId);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		jasmine.addSpecFile(resolvedPath);</span>
+<span class="cstat-no" title="statement not covered" >		jasmine.addSpecFile(resolvedPath);</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		cb(null, file);</span>
-	}, <span class="fstat-no" title="function not covered">function (cb) {</span>
-<span class="cstat-no" title="statement not covered">		var self = this;</span>
+<span class="cstat-no" title="statement not covered" >		cb(null, file);</span>
+	}, <span class="fstat-no" title="function not covered" >function (cb) {</span>
+<span class="cstat-no" title="statement not covered" >		var self = this;</span>
 &nbsp;
-<span class="cstat-no" title="statement not covered">		try {</span>
-<span class="cstat-no" title="statement not covered">			if (jasmine.helperFiles) {</span>
-<span class="cstat-no" title="statement not covered">				jasmine.helperFiles.forEach(<span class="fstat-no" title="function not covered">function (helper) {</span></span>
-<span class="cstat-no" title="statement not covered">					var resolvedPath = path.resolve(helper);</span>
-<span class="cstat-no" title="statement not covered">					var modId = require.resolve(resolvedPath);</span>
-<span class="cstat-no" title="statement not covered">					deleteRequireCache(modId);</span>
+<span class="cstat-no" title="statement not covered" >		try {</span>
+<span class="cstat-no" title="statement not covered" >			if (jasmine.helperFiles) {</span>
+<span class="cstat-no" title="statement not covered" >				jasmine.helperFiles.forEach(<span class="fstat-no" title="function not covered" >function (helper) {</span></span>
+<span class="cstat-no" title="statement not covered" >					var resolvedPath = path.resolve(helper);</span>
+<span class="cstat-no" title="statement not covered" >					var modId = require.resolve(resolvedPath);</span>
+<span class="cstat-no" title="statement not covered" >					deleteRequireCache(modId);</span>
 				});
 			}
 &nbsp;
-<span class="cstat-no" title="statement not covered">			jasmine.onComplete(<span class="fstat-no" title="function not covered">function (passed) {</span></span>
-<span class="cstat-no" title="statement not covered">				if (errorOnFail &amp;&amp; !passed) {</span>
-<span class="cstat-no" title="statement not covered">					cb(new gutil.PluginError('gulp-jasmine', 'Tests failed', {</span>
+<span class="cstat-no" title="statement not covered" >			jasmine.onComplete(<span class="fstat-no" title="function not covered" >function (passed) {</span></span>
+<span class="cstat-no" title="statement not covered" >				if (errorOnFail &amp;&amp; !passed) {</span>
+<span class="cstat-no" title="statement not covered" >					cb(new gutil.PluginError('gulp-jasmine', 'Tests failed', {</span>
 						showStack: false
 					}));
 				} else {
-<span class="cstat-no" title="statement not covered">					self.emit('jasmineDone', passed);</span>
-<span class="cstat-no" title="statement not covered">					cb();</span>
+<span class="cstat-no" title="statement not covered" >					self.emit('jasmineDone', passed);</span>
+<span class="cstat-no" title="statement not covered" >					cb();</span>
 				}
 			});
 &nbsp;
-<span class="cstat-no" title="statement not covered">			jasmine.execute();</span>
+<span class="cstat-no" title="statement not covered" >			jasmine.execute();</span>
 		} catch (err) {
-<span class="cstat-no" title="statement not covered">			cb(new gutil.PluginError('gulp-jasmine', err, {showStack: true}));</span>
+<span class="cstat-no" title="statement not covered" >			cb(new gutil.PluginError('gulp-jasmine', err, {showStack: true}));</span>
 		}
 	});
 };
 &nbsp;
 &nbsp;</pre></td></tr>
-</tbody></table></pre>
+</table></pre>
 </div>
 <div class="footer">
-    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Tue Apr 11 2017 17:17:16 GMT+0000 (UTC)</div>
+    <div class="meta">Generated by <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a> at Wed Apr 19 2017 05:58:01 GMT+0000 (UTC)</div>
 </div>
-
-
-</body></html>
+</body>
+</html>
