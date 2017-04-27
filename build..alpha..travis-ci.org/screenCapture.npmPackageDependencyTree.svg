@@ -51,7 +51,7 @@
 <tspan x="10" y="778">  │ └─┬ vinyl@0.5.3 </tspan>
 <tspan x="10" y="794">  │   ├── clone@1.0.2 </tspan>
 <tspan x="10" y="810">  │   └── clone-stats@0.0.1 </tspan>
-<tspan x="10" y="826">  ├─┬ jasmine@2.5.3 </tspan>
+<tspan x="10" y="826">  ├─┬ jasmine@2.6.0 </tspan>
 <tspan x="10" y="842">  │ ├── exit@0.1.2 </tspan>
 <tspan x="10" y="858">  │ ├─┬ glob@7.1.1 </tspan>
 <tspan x="10" y="874">  │ │ ├── fs.realpath@1.0.0 </tspan>
@@ -64,7 +64,7 @@
 <tspan x="10" y="986">  │ │ │   └── concat-map@0.0.1 </tspan>
 <tspan x="10" y="1002">  │ │ ├── once@1.4.0 </tspan>
 <tspan x="10" y="1018">  │ │ └── path-is-absolute@1.0.1 </tspan>
-<tspan x="10" y="1034">  │ └── jasmine-core@2.5.2 </tspan>
+<tspan x="10" y="1034">  │ └── jasmine-core@2.6.1 </tspan>
 <tspan x="10" y="1050">  ├─┬ jasmine-terminal-reporter@1.0.3 </tspan>
 <tspan x="10" y="1066">  │ ├─┬ indent-string@2.1.0 </tspan>
 <tspan x="10" y="1082">  │ │ └─┬ repeating@2.0.1 </tspan>
